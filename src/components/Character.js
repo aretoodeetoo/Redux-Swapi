@@ -1,7 +1,11 @@
 import React from "react";
 
 const Character = props => {
-  return <li>{props.character.name}</li>;
+  return (
+  <div>
+    <li>{props.character.name}</li>
+  </div>  
+  );
 };
 
 export default Character;
