@@ -23,10 +23,13 @@ export const charsReducer = (state = initialState, action) => {
         err: ''
       }
       case GET_CHAR_SUCCESS:
+      console.log('success', action.payload);
       return {
         ...state,
         fetching: false,
-        characters: action.payload,
+        characters: [
+          ...state.characters,
+          ...action.payload],
         err: ''
       }
       case GET_CHAR_FAILURE:

@@ -8,7 +8,7 @@ export const getChar = () => dispatch => {
     dispatch({ type: GET_CHAR_LOADING });
     axios
         .get('https://swapi.co/api/people')
-        .then(res => dispatch({ type: GET_CHAR_SUCCESS, payload: res.data }))
+        .then(res => dispatch({ type: GET_CHAR_SUCCESS, payload: res.data.results }))
         .catch(err => dispatch({ type: GET_CHAR_FAILURE, payload: err }))
 }
 
